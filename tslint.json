@@ -1,0 +1,22 @@
+{
+  "extends": ["tslint:recommended", "tslint-react"],
+  "rules": {
+    "max-classes-per-file": [
+      false,
+      0
+    ],
+    "object-literal-sort-keys": false,
+    "no-var-requires": false,
+    "no-trailing-whitespace": false,
+    "semicolon": [true, "always", "ignore-bound-class-methods"],
+    "jsx-wrap-multiline": false,
+    "jsx-no-multiline-js": false,
+    "jsx-alignment": false,
+    "jsx-no-lambda": false,
+    "jsx-ban-props": [true, ["href", "can cause reload of application."]],
+    "jsx-key": false,
+    "ban": [true, {"name": "setBrowserLocation", "message": "can cause reload of application."}],
+    "max-line-length": [true, {"limit": 120, "ignore-pattern": "^import |^export {(.*?)} | <path"}],
+    "object-literal-key-quotes": false
+  }
+}

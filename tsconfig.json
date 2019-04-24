@@ -1,0 +1,22 @@
+{
+  "compilerOptions": {
+    "baseUrl": ".",
+    "sourceMap": true,
+    "noImplicitAny": true,
+    "module": "commonjs",
+    "target": "es5",
+    "noEmit": true,
+    "jsx": "react",
+    "strictNullChecks": true,
+    "lib": [
+      "dom",
+      "es2018"
+    ]
+  },
+  "include": [
+    "src/**/*",
+    "css/material-ui-overrides.ts",
+    "css/Colors.ts",
+    "css/text-styles.ts"
+  ]
+}
