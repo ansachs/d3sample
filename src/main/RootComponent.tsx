@@ -13,14 +13,14 @@ interface IdataInterface {
     value: number,
 }
 
-const data = [{name: "Domestic Equity", value: 174031626},
-    {name: "Lifecycle", value: 99734128},
-    {name: "Other", value: 30984760},
-    {name: "Bond", value: 22434483},
-    {name: "International Equity", value: 21063260},
-    {name: "Money Market", value: 11963073},
-    {name: "Stable Value", value: 6816866},
-    {name: "Specialty", value: 5786989},];
+const data = [{name: "Domestic Equity", value: 345634563},
+    {name: "Lifecycle", value: 75675},
+    {name: "Other", value: 46456456},
+    {name: "Bond", value: 34534587},
+    {name: "International Equity", value: 54645645},
+    {name: "Money Market", value: 56756756},
+    {name: "Stable Value", value: 76876867},
+    {name: "Specialty", value: 78978978},];
 
 
 export class RootComponent extends React.Component {
