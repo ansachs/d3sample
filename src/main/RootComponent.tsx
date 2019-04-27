@@ -56,9 +56,29 @@ export class RootComponent extends React.Component {
             .enter().append("g")
             .attr("class", "arc");
 
+        function highlightSlice(d: PieArcDatum<IdataInterface>) {
+            d3.selectAll(".pie-chart__slice")
+                .style("opacity", ".35")
+                .classed("selected", false);
+
+            d3.select(".pie-chart__slice-" + d.data.name.replace(" ", "-"))
+                .style("opacity", "1")
+                .classed("selected", true);
+
+        }
+
+        function unhighlightSlice(d: PieArcDatum<IdataInterface>) {
+            d3.selectAll(".pie-chart__slice")
+                .style("opacity", "1")
+                .classed("selected", false);
+        }
+
         const a = boundSvg.append("path")
             .attr("d", arc)
             .attr("fill", d => "hsl(" + Math.random() * 360 + ",100%,50%)")
+            .attr("class", (d: PieArcDatum<IdataInterface>) => "pie-chart__slice pie-chart__slice-" + d.data.name.replace(" ", "-"))
+            .on("mouseover", highlightSlice)
+            .on("mouseout", unhighlightSlice)
 
 
     }
